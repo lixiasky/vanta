@@ -73,8 +73,6 @@ Terminal: zsh (macOS default)
 
 ---
 
-Project Structure
-
 
 ## Project Structure
 
