@@ -75,17 +75,17 @@ Terminal: zsh (macOS default)
 
 Project Structure
 
-vanta/
-├── main.go                  # Main entry point
-├── capture.json             # Example input
-├── internal/
-│   ├── core/                # Packet capture and flow reassembly
-│   ├── decoder/             # Protocol decoders
-│   ├── fuzz/                # Fuzzing module (experimental)
-│   └── export/              # Behavior exporting logic
-└── usage                    # Usage documentation
 
+## Project Structure
 
+- `main.go` — Main entry point
+- `capture.json` — Example input file
+- `internal/`
+  - `core/` — Packet capture and flow reassembly
+  - `decoder/` — Protocol decoders
+  - `fuzz/` — Fuzzing module (experimental)
+  - `export/` — Behavior exporting logic
+- `usage/` — Usage documentation
 ---
 
 Why I Built This
