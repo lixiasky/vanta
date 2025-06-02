@@ -1,0 +1,71 @@
+Usage
+
+Vanta is a modular network traffic analyzer and fuzzing engine. Run it to capture and analyze HTTP, TLS, and DNS packets, and optionally fuzz detected HTTP endpoints.
+
+Basic usage
+
+# Capture HTTP/TLS/DNS traffic from default interface (usually lo0 or eth0)
+go run main.go
+
+
+---
+
+Custom interface and output
+
+# Specify interface and write captured packets to a JSON Lines file
+go run main.go --iface=en0 --output=capture.jsonl
+
+
+---
+
+Disable specific protocol decoders
+
+# Only decode HTTP traffic (disable TLS and DNS)
+go run main.go --no-tls --no-dns
+
+
+---
+
+Enable fuzzing mode
+
+# Enable fuzzing with default payloads against any HTTP traffic detected
+go run main.go --fuzz
+
+
+---
+
+Custom fuzzing configuration
+
+# Provide your own payloads and set concurrency
+go run main.go --fuzz \
+  --fuzz-payloads=payloads.txt \
+  --fuzz-concurrency=20
+
+Example payloads.txt:
+
+' OR 1=1 --
+../../../../etc/passwd
+<script>alert(1)</script>
+FUZZ
+
+
+---
+
+Build and run binary
+
+go build -o vanta main.go
+sudo ./vanta --iface=eth0 --output=result.jsonl
+
+
+---
+
+Output format
+
+Captured packets and fuzzing results are printed in JSON Lines (one object per line).
+Example output:
+
+{"timestamp":"2025-05-25T10:00:00Z","protocol":"HTTP","src_ip":"192.168.1.10","dst_ip":"93.184.216.34","src_port":51234,"dst_port":80,"http_info":{"method":"GET","path":"/","headers":{"User-Agent":"curl/7.88.1"}}}
+{"target":"http://example.com/FUZZ","payload":"<script>alert(1)</script>","response":{"status_code":500,"length":134,"anomaly":true}}
+
+
+---
