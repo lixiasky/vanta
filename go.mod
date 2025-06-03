@@ -1,4 +1,4 @@
-module vanta
+module github.com/lixiasky/vanta
 
 go 1.23.0
 
