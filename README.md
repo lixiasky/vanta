@@ -107,5 +107,5 @@ This project might not be perfect, but it is heartfelt.
 
 If you are willing to review, share, or offer feedback:
 
-Email: lixiasky@protonmail.com
+Email: lixiasky+public@protonmail.com
 GitHub: github.com/lixiasky
