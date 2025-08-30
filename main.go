@@ -12,10 +12,10 @@ import (
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/pcap"
 
-	"vanta/internal/core"
-	"vanta/internal/decoder"
-	"vanta/internal/export"
-	"vanta/internal/fuzz"
+	"github.com/lixiasky/vanta/internal/core"
+	"github.com/lixiasky/vanta/internal/decoder"
+	"github.com/lixiasky/vanta/internal/export"
+	"github.com/lixiasky/vanta/internal/fuzz"
 )
 
 func main() {

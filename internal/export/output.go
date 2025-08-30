@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"vanta/internal/core"
+	"github.com/lixiasky/vanta/internal/core"
 )
 
 // WritePacket prints the packet info to stdout and optionally writes to a file.

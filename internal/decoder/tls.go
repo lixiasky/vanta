@@ -8,7 +8,7 @@ import (
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"
 
-	"vanta/internal/core"
+	"github.com/lixiasky/vanta/internal/core"
 )
 
 // TLSDecoder implements PacketDecoder for TLS traffic

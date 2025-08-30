@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"vanta/internal/core"
+	"github.com/lixiasky/vanta/internal/core"
 )
 
 // Fuzzer related structures and functions
